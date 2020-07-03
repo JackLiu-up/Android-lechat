@@ -1,5 +1,7 @@
 <resources>
     <string name="app_name">leChat</string>
-    <string name="text1">欢迎使用乐聊</string>
+    <string name="text1">乐聊,不亦乐乎</string>
     <string name="img1">splash</string>
+    <string name="textmain">" 已登录"</string>
+    <string name="textLogin">请登录</string>
 </resources>
