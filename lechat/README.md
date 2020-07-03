@@ -54,3 +54,7 @@
 </manifest>
 
 ```
+
+## 3.导入 MODEL
+
+File new File import Moudels
