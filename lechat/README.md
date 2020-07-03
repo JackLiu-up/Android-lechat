@@ -58,3 +58,6 @@
 ## 3.导入 MODEL
 
 File new File import Moudels
+
+![Alt text](图片链接 "Android-lechat/lechat/app/src/main/res/drawable/Snipaste_2020-07-03_12-25-59.png")
+
