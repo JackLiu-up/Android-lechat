@@ -1,4 +1,8 @@
 ## 1.下载环信 SDK
+
+* http://www.easemob.com/download/im
+
+
 ## 2.配置清单文件
 ```
 <?xml version="1.0" encoding="utf-8"?>
