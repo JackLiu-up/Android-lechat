@@ -70,3 +70,5 @@ File new import Moudels
 
 ## 4.EaseUI的配置
 * 初始化EaseUI http://docs-im.easemob.com/im/android/sdk/basic
+
+## 5.splash页面编写

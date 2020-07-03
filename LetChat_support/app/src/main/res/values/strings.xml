@@ -1,3 +1,5 @@
 <resources>
     <string name="app_name">leChat</string>
+    <string name="text1">欢迎使用乐聊</string>
+    <string name="img1">splash</string>
 </resources>
