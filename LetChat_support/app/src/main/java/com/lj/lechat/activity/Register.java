@@ -2,6 +2,7 @@ package com.lj.lechat.activity;
 
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.text.TextUtils;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
@@ -26,37 +27,35 @@ public class Register extends AppCompatActivity {
         reg_btn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-               String username = reg_username.getText().toString().trim();
-               String pwd = reg_pwd.getText().toString().trim();
+                final String username = reg_username.getText().toString().trim();
+                final String pwd = reg_pwd.getText().toString().trim();
 
-               if(username.equals("")){
-                   Toast.makeText(Register.this,"用户名不能为空",Toast.LENGTH_LONG).show();
-               }else if(pwd.equals("")){
-                   Toast.makeText(Register.this,"密码不能为空",Toast.LENGTH_LONG).show();
-               }else {
-                   new Thread(){
-                       @Override
-                       public void run() {
-                           try {
-                               EMClient.getInstance().createAccount(username,pwd);
-                               runOnUiThread(new Runnable() {
-                                   @Override
-                                   public void run() {
-                                       Toast.makeText(Register.this,"注册成功",Toast.LENGTH_LONG).show();
-                                   }
-                               });
-                           } catch (HyphenateException e) {
-                               e.printStackTrace();
-                               runOnUiThread(new Runnable() {
-                                   @Override
-                                   public void run() {
-                                       Toast.makeText(Register.this,"注册失败:"+e.getMessage(),Toast.LENGTH_LONG).show();
-                                   }
-                               });
-                           }
-                       }
-                   }.start();
-               }
+                if (TextUtils.isEmpty(username) || TextUtils.isEmpty(pwd)) {
+                    Toast.makeText(Register.this, "用户名和密码不能为空", Toast.LENGTH_LONG).show();
+                    return;
+                }
+                new Thread() {
+                    @Override
+                    public void run() {
+                        try {
+                            EMClient.getInstance().createAccount(reg_username.getText().toString(), reg_pwd.getText().toString());
+                            runOnUiThread(new Runnable() {
+                                @Override
+                                public void run() {
+                                    Toast.makeText(Register.this, "注册成功", Toast.LENGTH_LONG).show();
+                                }
+                            });
+                        } catch (HyphenateException e) {
+                            e.printStackTrace();
+                            runOnUiThread(new Runnable() {
+                                @Override
+                                public void run() {
+                                    Toast.makeText(Register.this, "注册失败:" + e.getMessage(), Toast.LENGTH_LONG).show();
+                                }
+                            });
+                        }
+                    }
+                }.start();
             }
         });
     }
