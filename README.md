@@ -68,3 +68,5 @@ File new import Moudels
 将下载好的easemob-sdk-3.6.9.1/examples/easeui导入
 ```
 
+## 4.EaseUI的配置
+* 初始化EaseUI http://docs-im.easemob.com/im/android/sdk/basic
