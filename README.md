@@ -70,3 +70,11 @@ File new import Moudels
 
 ## 4.EaseUI的配置
 * 初始化EaseUI http://docs-im.easemob.com/im/android/sdk/basic
+
+## 5.splash页面编写
+UI 界面设计图片来自网络
+```
+1. 登录页面
+2. splash页面  记得将清单文件中的优先启动换成 splash 页面
+两秒后判断是否登录过,没登录跳到登录页面,已登录跳到 main 界面
+```
