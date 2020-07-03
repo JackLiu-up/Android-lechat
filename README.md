@@ -4,6 +4,7 @@
 
 
 ## 2.配置清单文件
+* 参考环信开发文档:http://docs-im.easemob.com/im/android/sdk/import
 ```
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
