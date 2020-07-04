@@ -1,5 +1,6 @@
 package com.lj.lechat.activity;
 
+import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.text.TextUtils;
@@ -62,6 +63,7 @@ public class Register extends AppCompatActivity {
                                             public void run() {
 
                                                 Toast.makeText(Register.this, "注册成功", Toast.LENGTH_LONG).show();
+                                                startActivity(new Intent(Register.this,Login.class));
                                             }
                                         });
                                     }else {
