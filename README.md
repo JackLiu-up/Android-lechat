@@ -86,3 +86,9 @@ UI设计
 
 ## 8.使用bmob作为用户信息数据库
 * 根据文档自动导入ｓｄｋ:https://docs.bmob.cn/data/Android/a_faststart/doc/index.html#SDK%E5%AF%BC%E5%85%A5
+
+### 注意事项，引入比目后别忘了配置清单文件
+![image](https://github.com/JasonRobit/101010/blob/master/pictures/%E6%AF%94%E7%9B%AE%E6%B8%85%E5%8D%95%E9%85%8D%E7%BD%AE.png)
+
+* 比目中，根据你需求，添加需要的列
+![image](https://github.com/JasonRobit/101010/blob/master/pictures/%E6%AF%94%E7%9B%AE%E8%A1%A8%E5%88%97.png)
