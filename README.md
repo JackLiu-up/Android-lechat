@@ -83,3 +83,6 @@ UI 界面设计图片来自网络
 UI设计
 
 ## 7.注册布局的UI设计和功能实现
+
+## 8.使用bmob作为用户信息数据库
+* 根据文档自动导入ｓｄｋ:https://docs.bmob.cn/data/Android/a_faststart/doc/index.html#SDK%E5%AF%BC%E5%85%A5

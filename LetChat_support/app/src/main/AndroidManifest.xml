@@ -32,6 +32,12 @@
         android:roundIcon="@drawable/logo"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
+
+        <provider
+            android:name="cn.bmob.v3.util.BmobContentProvider"
+            android:authorities="com.lj.lechat.BmobContentProvider">
+        </provider>
+
         <activity android:name=".activity.Register"/>
         <activity android:name=".activity.Login" />
         <activity android:name=".MainActivity" />
@@ -66,6 +72,9 @@
                 <action android:name="android.intent.action.USER_PRESENT" />
             </intent-filter>
         </receiver>
+
+
+
     </application>
 
 </manifest>
