@@ -79,7 +79,7 @@
         app:layout_constraintGuide_percent="0.6" />
 
     <Button
-        android:id="@+id/button2"
+        android:id="@+id/login"
         android:layout_width="100dp"
         android:layout_height="wrap_content"
         android:background="@drawable/shap_login"
