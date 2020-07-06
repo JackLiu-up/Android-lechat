@@ -95,4 +95,4 @@ UI 界面设计图片来自网络
 ![image](https://github.com/JasonRobit/101010/blob/master/pictures/%E6%AF%94%E7%9B%AE%E8%A1%A8%E5%88%97.png)
 
 ## 9.主页面导航
-https://www.jianshu.com/p/3e73d9b3b459
+参照https://www.jianshu.com/p/9dcad0344736
