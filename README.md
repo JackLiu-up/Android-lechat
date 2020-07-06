@@ -95,4 +95,10 @@ UI 界面设计图片来自网络
 ![image](https://github.com/JasonRobit/101010/blob/master/pictures/%E6%AF%94%E7%9B%AE%E8%A1%A8%E5%88%97.png)
 
 ## 9.主页面导航
-参照https://www.jianshu.com/p/9dcad0344736
+在app下的build.gradle中添加
+```
+//底部导航
+    implementation('com.ashokvarma.android:bottom-navigation-bar:2.2.0'){
+        exclude group:'com.android.support'
+    }
+```
