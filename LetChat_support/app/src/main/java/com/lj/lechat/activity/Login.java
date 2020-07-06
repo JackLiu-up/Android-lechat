@@ -30,6 +30,8 @@ public class Login extends AppCompatActivity {
         Bmob.initialize(this,"c796533e10b18dac485c0501e3fa5a1e");
 
         initView();
+
+        //登录按钮监听
         toLogin.setOnClickListener(new View.OnClickListener() {
             String username = lusername.getText().toString().trim();
             String pwd = lpwd.getText().toString().trim();
@@ -42,9 +44,12 @@ public class Login extends AppCompatActivity {
                     new Thread() {
                         @Override
                         public void run() {
-                            EMClient.getInstance().login(username, pwd, new EMCallBack() {
+                            EMClient.getInstance().login(lusername.toString().trim(), lpwd.toString().trim(), new EMCallBack() {
                                 @Override
                                 public void onSuccess() {
+                                    EMClient.getInstance().groupManager().loadAllGroups();
+                                    EMClient.getInstance().chatManager().loadAllConversations();
+                                    Log.d("main", "登录聊天服务器成功！");
                                     //登录成功
                                     final User user = new User();
                                     user.setUsername(username);
@@ -58,6 +63,7 @@ public class Login extends AppCompatActivity {
                                                     public void run() {
                                                         Toast.makeText(Login.this, "登录成功", Toast.LENGTH_SHORT).show();
                                                         startActivity(new Intent(Login.this, MainActivity.class));
+                                                        Log.d("Message","比目登录成功");
                                                         finish();
                                                     }
                                                 });
@@ -65,7 +71,8 @@ public class Login extends AppCompatActivity {
                                                 runOnUiThread(new Runnable() {
                                                     @Override
                                                     public void run() {
-                                                        Toast.makeText(Login.this, "登录失败"+e, Toast.LENGTH_SHORT).show();
+                                                        Toast.makeText(Login.this, "bmob登录失败"+e, Toast.LENGTH_SHORT).show();
+                                                        Log.d("Message","比目登录失败"+e);
                                                     }
                                                 });
                                             }
@@ -79,6 +86,7 @@ public class Login extends AppCompatActivity {
                                         @Override
                                         public void run() {
                                             Toast.makeText(Login.this,"登录失败"+s,Toast.LENGTH_SHORT).show();
+                                            Log.d("Message","环信登录失败"+s);
                                         }
                                     });
                                 }
@@ -94,6 +102,7 @@ public class Login extends AppCompatActivity {
             }
         });
 
+        //注册界面跳转
         toReg.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {

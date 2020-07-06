@@ -22,6 +22,11 @@ allprojects {
         jcenter()
         //Bmob的maven仓库地址--必填
         maven {url 'https://dl.bintray.com/chaozhouzhang/maven' }
+
+        maven {
+            url 'https://maven.google.com/'
+            name 'Google'
+        }
     }
 }
 
